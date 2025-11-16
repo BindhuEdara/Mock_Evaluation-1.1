@@ -88,13 +88,15 @@
      }
      #bottom_section{
       display: flex;
-      flex-direction: row;
+      justify-content: space-evenly;
+      max-width: 1000px;
+      width: 100%;
       justify-content: center;
-      border: 1px solid black;
-      align-items: center;
+      gap: 10px;
+      padding: 10px;
      }
-     #bottom_section>div>img{
-      height: 60%;
+     #bottom_section>img{
+      height:40%;
       width: 40%;
      }
      #bottom_section>div:nth-child(2)>div p,
@@ -103,6 +105,12 @@
      }
       #bottom_section>div:nth-child(2)>div:last-child{
         border: 1px solid red;
+      }
+      #bottom_section .images{
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        width: 600px;
       }
       @media(max-width:424px){
         #container #Header_section>div{
@@ -116,16 +124,29 @@
           display: grid;
           grid-template-columns: repeat(2, 1fr);
          }
-
+          #bottom_section{
+            display: flex;
+            flex-direction: column;
+          }
       }
       @media(max-width:319px){
         #container #Header_section>div{
           display: none;
         }
+         #container #Header_section{
+          width: 100%;
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+        }
          #container #top_section,  #mid_section{
           display: grid;
           grid-template-columns: 1fr;
          }
+         #bottom_section{
+            display: flex;
+            flex-direction: column;
+          }
       }
   </style>
 </head>
@@ -268,7 +289,18 @@
       <div>DISCOVER PIZZA</div>
     </div>
   </div>
-  
+  <div id="bottom_section">
+      <img src="https://coding-platform.s3.amazonaws.com/dev/lms/tickets/48f2fc25-38f4-4d25-a878-78f15988b371/kXSpyg2iCHrCEljP.png" alt="">
+
+    <div>
+      <h1>Unlock Exclusive Offers</h1>
+      <p>For lightning fast ordering experience download the Domino's app</p>
+      <div class="images">
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.09%20PM_558991.png" alt="">
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.43%20PM_652243.png" alt="">
+      </div>
+    </div>
+  </div>
   </div>
 </body>
 </html>
